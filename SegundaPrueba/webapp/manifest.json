@@ -1,0 +1,129 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "softtek.SegundaPrueba",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZOS_CA_JUGO1_ACADEMIA_SRV": {
+				"uri": "/sap/opu/odata/sap/ZOS_CA_JUGO1_ACADEMIA_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "icon/favicon-32x32.png",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "softtek.SegundaPrueba.view.Vista1",
+			"type": "XML",
+			"async": true,
+			"id": "Vista1"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "softtek.SegundaPrueba.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZOS_CA_JUGO1_ACADEMIA_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "softtek.SegundaPrueba.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "RouteVista1",
+					"pattern": "RouteVista1",
+					"target": [
+						"TargetVista1"
+					]
+				},
+				{
+					"name": "RouteVistaDetalle",
+					"pattern": "VistaDetalle/{Idtitulo}",
+					"target": [
+						"VistaDetalle"
+					]
+				}
+			],
+			"targets": {
+				"TargetVista1": {
+					"viewType": "XML",
+					"viewName": "Vista1"
+				},
+				"VistaDetalle": {
+					"viewType": "XML",
+					"viewName": "VistaDetalle"
+				}
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

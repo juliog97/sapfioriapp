@@ -1,0 +1,1 @@
+sap.ui.define(["softtek/SegundaPrueba/controller/Vista1.controller"],function(t){"use strict";QUnit.module("Vista1 Controller");QUnit.test("I should test the Vista1 controller",function(e){var n=new t;n.onInit();e.ok(n)})});

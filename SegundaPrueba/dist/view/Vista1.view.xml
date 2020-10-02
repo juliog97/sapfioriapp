@@ -1,0 +1,75 @@
+<mvc:View controllerName="softtek.SegundaPrueba.controller.Vista1"
+xmlns:mvc="sap.ui.core.mvc"
+displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>INVENTFLIX}">
+					<content>
+						<!--<Button text="Series Disponibles" press="onPressSeries"/>-->
+						<!--<Button text="Temporadas disponibles" press="onPressLeerSeries"/>-->
+						<!--<Button text="Leer Vuelo especifico" press="onPressBotonError"/> -->
+						<!--<HBox>-->
+						<!--	<Label text="Ingrese el ID de serie" labelFor="serie"/>-->
+						<!--	<Input id="serie" width="5rem" value="DEFAULT"/>-->
+						<!--</HBox>-->
+						<ScrollContainer height="15rem" vertical="true">
+							<Table id="_tablaSerie" items="{/SeriesSet}" noDataText="No se encontraron datos">
+								<!--<Table items="{/SeriesSet}">-->
+								<columns>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="{i18n>idSerie}"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="{i18n>titulo}"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="{i18n>genero}"/>
+										</header>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Navigation" press="onPressSeries">
+										<cells>
+											<ObjectIdentifier text="{Idtitulo}"/>
+											<ObjectAttribute text="{Titulo}"/>
+											<ObjectAttribute text="{Generos}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</ScrollContainer>
+						<ScrollContainer height="10rem">
+							<!--<Table items="{/TemporadaSet}" noDataText="No se encontraron datos">-->
+								<!--<Table items="{/VueloSet}">-->
+								<!--<columns>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Id Serie"/>
+										</header>
+									</Column>
+									<Column hAlign="Begin" width="16rem">
+										<header>
+											<Text text="Descripcion"/>
+										</header>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>-->
+						</ScrollContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

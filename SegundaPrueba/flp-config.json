@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "softtek.SegundaPrueba.SegundaPrueba",
+        "description": "Inventflix, una app para mostrar las temporadas disponibles de una serie",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#SegundaPrueba-Display",
+        "navigationComponentName": "softtek.SegundaPrueba",
+        "intentSemanticObject": "SegundaPrueba",
+        "intentAction": "Display",
+        "html5ApplicationName": "inventflix",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "d8f99dc6-9e6c-49b7-a647-4d97ea827e15-1600974986544"
+        ],
+        "contentPackages": [
+            "1bdc904d-f028-4722-ad37-562e18e982ea"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Inventflix",
+        "subtitle": "Una app para mostrar las temporadas disponibles de una serie",
+        "searchKeywords": "Inventflix,Una app para mostrar las temporadas disponibles de una serie",
+        "displayIconUrl": "sap-icon://media-play",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}
